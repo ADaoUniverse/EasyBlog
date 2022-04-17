@@ -1,0 +1,15 @@
+.author-container {
+  display: flex;
+  align-items: center;
+}
+.author-container .icon {
+  border-radius: 50%;
+  width: 1.5rem;
+  margin-right: 3px;
+}
+
+.author-container .author {
+  margin-left: 3px;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
