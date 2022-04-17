@@ -1,0 +1,27 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.left-panel {
+  grid-area: 1 / 1 / 6 / 2;
+  text-align: right;
+  margin-right: 0.5px;
+}
+
+.center-panel {
+  grid-area: 1 / 2 / 6 / 5;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
+}
+.right-panel {
+  grid-area: 1 / 5 / 6 / 6;
+  margin-left: 0.5px;
+}
+
+.left-panel a {
+  display: block;
+}

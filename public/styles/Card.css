@@ -6,14 +6,12 @@
 }
 
 .card {
-  /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 var(--card-shadow);
   transition: 0.3s;
   padding: 42px 52px;
   max-width: 500px;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 var(--card-shadow);
 }
@@ -22,6 +20,6 @@ a:visited .card {
   color: var(--text-color);
 }
 
-a,.card-container-margin {
+.card-container-margin {
   margin: 32px;
 }

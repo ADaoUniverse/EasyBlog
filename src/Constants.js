@@ -17,6 +17,10 @@ const id = {
     createBlogContent: "inputCreateBlogContent",
     createBlogIsPaid: "inputCreateBlogIsPaid",
   },
+  div: {
+    navbar: "divNavbar",
+    navbarStickyPadding:"divNavbarStickyPadding"
+  },
 };
 
 module.exports = {

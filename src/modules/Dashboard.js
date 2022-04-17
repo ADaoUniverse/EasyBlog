@@ -1,8 +1,6 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-
-import Toggle from "../components/Toggle";
-import { eventTopic } from "../Constants";
+import Navbar from "../components/Navbar";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -10,24 +8,21 @@ class Dashboard extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Toggle
-          onChange={(isDark) =>
-            window.dispatchEvent(new CustomEvent(eventTopic.REQUEST_THEME_TOGGLE, { detail: { isDark } }))
-          }
-        />
-        <h1>Dashboard</h1>
-        <ul>
-          <li>
+      <>
+        <Navbar />
+        <div className="grid-container">
+          <div className="left-panel">
             <Link to="/view">View Blog</Link>
-          </li>
-          <li>
             <Link to="/create">Create Blog</Link>
-          </li>
-        </ul>
-        <hr />
-        <Outlet />
-      </div>
+          </div>
+          <div className="center-panel">
+            <Outlet />
+          </div>
+          <div className="right-panel">
+            <h1>This is the right panel. I am going to add more functionality here</h1>
+          </div>
+        </div>
+      </>
     );
   }
 }
