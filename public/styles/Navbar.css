@@ -1,5 +1,4 @@
 .navbar {
-  width: initial;
   display: flex;
   height: 1rem;
   justify-content: space-between;
@@ -7,6 +6,10 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   background: var(--bg-color);
+  position: sticky;
+  top: 0;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .navitem {
   display: flex;

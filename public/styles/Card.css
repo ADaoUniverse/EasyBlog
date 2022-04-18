@@ -5,6 +5,16 @@
   flex-wrap: wrap;
 }
 
+.card-container-margin {
+  width: 100%;
+  margin: 32px;
+}
+
+a.card-container-margin {
+  color: var(--text-color) !important;
+  text-decoration: none;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 var(--card-shadow);
   transition: 0.3s;
@@ -14,12 +24,4 @@
 
 .card:hover {
   box-shadow: 0 8px 16px 0 var(--card-shadow);
-}
-
-a:visited .card {
-  color: var(--text-color);
-}
-
-.card-container-margin {
-  margin: 32px;
 }

@@ -1,27 +1,36 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  flex-direction: row;
+  height: 100%;
 }
 
 .left-panel {
-  grid-area: 1 / 1 / 6 / 2;
+  width: 300px;
   text-align: right;
-  margin-right: 0.5px;
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  position: sticky;
+  top: 48px;
 }
 
 .center-panel {
-  grid-area: 1 / 2 / 6 / 5;
-  margin-left: 0.5px;
-  margin-right: 0.5px;
+  flex: 1;
+  min-width: 300px;
 }
 .right-panel {
-  grid-area: 1 / 5 / 6 / 6;
-  margin-left: 0.5px;
+  width: 300px;
 }
 
 .left-panel a {
   display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel {
+  height: 100%;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
 }

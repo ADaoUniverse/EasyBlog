@@ -38,6 +38,18 @@ textarea:focus {
   outline: none;
 }
 
+a:visited {
+  color: var(--dark-color);
+}
+
+a {
+  color: var(--main-color);
+}
+
+a:hover {
+  color: var(--light-color);
+}
+
 button {
   padding-left: 24px;
   padding-right: 24px;

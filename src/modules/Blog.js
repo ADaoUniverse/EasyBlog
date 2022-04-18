@@ -7,21 +7,7 @@ import dayjs from "dayjs";
 import BlogHelper from "../helpers/BlogHelper";
 import Author from "../components/Author";
 
-export default () => {
-  const params = useParams();
-  const helper = new BlogHelper();
-
-  const [blog, setBlog] = useState();
-
-  const getBlog = async () => {
-    setBlog(await helper.getBlog(params.blogId));
-  };
-
-  useEffect(() => {
-    getBlog();
-  }, []);
-
-  if (!blog) return <div>Blog not found</div>;
+const RenderBlog = ({ blog }) => {
   return (
     <div
       style={{
@@ -38,4 +24,24 @@ export default () => {
       <ReactMarkdown children={blog.content} remarkPlugins={[remarkGfm]} />
     </div>
   );
+};
+
+export default ({ b }) => {
+  if (b) return <RenderBlog blog={b} />;
+
+  const params = useParams();
+  const helper = new BlogHelper();
+
+  const [blog, setBlog] = useState();
+
+  const getBlog = async () => {
+    setBlog(await helper.getBlog(params.blogId));
+  };
+
+  useEffect(() => {
+    getBlog();
+  }, []);
+
+  if (!blog) return <div>Blog not found</div>;
+  return <RenderBlog blog={blog} />;
 };
