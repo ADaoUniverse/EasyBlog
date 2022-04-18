@@ -1,0 +1,36 @@
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  flex-direction: row;
+  height: 100%;
+}
+
+.left-panel {
+  width: 300px;
+  text-align: right;
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  position: sticky;
+  top: 48px;
+}
+
+.center-panel {
+  flex: 1;
+  min-width: 300px;
+}
+.right-panel {
+  width: 300px;
+}
+
+.left-panel a {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel {
+  height: 100%;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
+}

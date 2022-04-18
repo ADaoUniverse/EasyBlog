@@ -6,6 +6,7 @@
 @import "Toggle.css";
 @import "Card.css";
 @import "Author.css";
+@import "Dashboard.css";
 
 button:disabled,
 input:disabled,
@@ -35,6 +36,18 @@ input:focus,
 textarea:focus {
   border-bottom: 2px solid var(--light-color);
   outline: none;
+}
+
+a:visited {
+  color: var(--dark-color);
+}
+
+a {
+  color: var(--main-color);
+}
+
+a:hover {
+  color: var(--light-color);
 }
 
 button {
